@@ -1,12 +1,11 @@
 document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault(); // prevent form from refreshing page
+  e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
 
-  document.getElementById("response").textContent = 
-    `Thanks, ${name}! We'll contact you at ${email}.`;
+  document.getElementById("response").textContent =
+    `✅ Thanks, ${name}! I'll reach out to you at ${email}.`;
 
-  // Optionally clear the form after submission
   this.reset();
 });
